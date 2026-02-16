@@ -1,0 +1,148 @@
+:root {
+    --primary: #6c63ff;
+    --secondary: #4a47a3;
+    --background: #f8f9ff;
+    --text-dark: #222;
+    --text-light: #666;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+
+.skills-container,
+.activity-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card,
+.activity-card,
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 350px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.skill-card:hover,
+.activity-card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    margin: 15% auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-container,
+    .activity-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
