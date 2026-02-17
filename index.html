@@ -4,106 +4,127 @@
     <meta charset="UTF-8">
     <title>Tanvi Pohankar | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-    <h2 class="logo">Tanvi</h2>
+    <div class="logo">Tanvi.dev</div>
     <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#activities">Activities</a></li>
+        <li><a href="#expertise">Expertise</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-    <h1>Tanvi Pohankar</h1>
-    <p>Computer Science Engineer | Backend Developer</p>
-    <a href="#" class="btn">Download Resume</a>
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Tanvi Pohankar</span></h1>
+        <p>Computer Science Engineer | Frontend • Backend • Data Analytics</p>
+        <a href="#projects" class="btn">Explore My Work</a>
+    </div>
 </section>
 
+<!-- ================= ABOUT ================= -->
 <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-        Final-year Computer Science Engineering student focused on building 
-        scalable backend systems using Java, SQL, and JDBC.
-        Strong foundation in OOP, database design, and structured problem solving.
+        I am a Computer Science Engineering student with hands-on experience 
+        in frontend development, backend systems, and data analytics. 
+        I build responsive web applications, database-driven systems, 
+        and insightful dashboards using modern technologies.
     </p>
 </section>
 
-<section id="skills" class="section">
-    <h2>Technical Skills</h2>
-    <div class="skills-container">
-        <div class="skill-card">Core Java</div>
-        <div class="skill-card">SQL</div>
-        <div class="skill-card">JDBC</div>
-        <div class="skill-card">Database Design</div>
-        <div class="skill-card">Git</div>
+<!-- ================= DOMAIN EXPERTISE ================= -->
+<section id="expertise" class="section">
+    <h2>Domain Expertise</h2>
+
+    <div class="expertise-grid">
+
+        <!-- Frontend -->
+        <div class="expertise-card">
+            <h3>Frontend Engineering</h3>
+            <p class="tech">HTML • CSS • JavaScript • React</p>
+            <ul>
+                <li>Responsive UI Development</li>
+                <li>Modern SPA Architecture</li>
+                <li>Firebase Authentication</li>
+                <li>Interactive Web Interfaces</li>
+            </ul>
+        </div>
+
+        <!-- Backend -->
+        <div class="expertise-card">
+            <h3>Backend & Databases</h3>
+            <p class="tech">Java • MySQL • MS SQL • Firebase</p>
+            <ul>
+                <li>JDBC Integration</li>
+                <li>SQL Query Optimization</li>
+                <li>Database Schema Design</li>
+                <li>Stored Procedures</li>
+            </ul>
+        </div>
+
+        <!-- Data -->
+        <div class="expertise-card">
+            <h3>Data Analytics</h3>
+            <p class="tech">Excel • Power BI • Python</p>
+            <ul>
+                <li>Dashboard Creation</li>
+                <li>KPI & Data Visualization</li>
+                <li>Data Cleaning & Analysis</li>
+                <li>Healthcare Dataset Insights</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
-<section id="activities" class="section">
-    <h2>Extracurricular Activities</h2>
-    <div class="activity-container">
-        <div class="activity-card">
-            <h3>Workshop Anchor</h3>
-            <p>
-                Anchored and coordinated a two-day workshop on Patent Drafting 
-                and Industry Standards at HVPM College.
-            </p>
-        </div>
-
-        <div class="activity-card">
-            <h3>Technical Seminar</h3>
-            <p>
-                Presented a seminar on SQL Injection Attacks 
-                explaining vulnerabilities and prevention methods.
-            </p>
-        </div>
-    </div>
-</section>
-
+<!-- ================= PROJECTS ================= -->
 <section id="projects" class="section">
     <h2>Projects</h2>
 
-    <div class="project-card">
-        <h3>Interview & Hiring Management System</h3>
-        <p>Backend system using Java and MySQL with stored procedures.</p>
-        <button class="btn" onclick="openModal()">View Details</button>
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Herbipedia</h3>
+            <p>Web platform with Firebase authentication and AI chatbot integration.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Airline Booking System</h3>
+            <p>Java + JDBC + SQL based backend system with structured database design.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Healthcare Dashboard</h3>
+            <p>Power BI dashboard analyzing healthcare datasets with KPIs & insights.</p>
+        </div>
+
     </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
 <section id="contact" class="section">
     <h2>Contact</h2>
-
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Full Name">
-        <input type="email" id="email" placeholder="Email Address">
-        <textarea id="message" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn">Send Message</button>
-        <p id="formMessage"></p>
-    </form>
+    <p>Email: yourmail@gmail.com</p>
+    <p>GitHub: github.com/yourprofile</p>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2026 Tanvi Pohankar</p>
+    © 2026 Tanvi Pohankar | All Rights Reserved
 </footer>
 
-<!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h3>Project Details</h3>
-        <p>
-            Designed a hiring workflow system with role-based access,
-            layered architecture, stored procedures, and exception handling.
-        </p>
-    </div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
