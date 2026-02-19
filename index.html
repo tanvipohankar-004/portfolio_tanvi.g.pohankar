@@ -2,176 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tanvi Pohankar | Portfolio</title>
+    <title>Tanvi G. Pohankar | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
-<body style="font-family: 'Poppins', sans-serif;">
+<body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
-    <a class="navbar-brand fw-bold" href="#">Tanvi.dev</a>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="logo">Tanvi G. Pohankar</div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<!--HERO-->
-<section class="container-fluid bg-light py-5">
-    <div class="row align-items-center px-5">
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="container hero-flex">
 
-        <div class="col-md-6">
-            <h1 class="fw-bold">Hi, I'm <span class="text-primary">Tanvi Pohankar</span></h1>
-            <h5 class="mt-3">
-                Computer Science Engineer passionate about 
-                Frontend Development, Backend Systems, and Data Analytics.
-            </h5>
+        <div class="hero-text">
+            <h1>Tanvi G. Pohankar</h1>
+            <h3>I am a <span id="typing"></span></h3>
 
-            <div class="mt-4">
-                <a href="#" class="me-3 text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="me-3 text-dark"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#" class="text-dark"><i class="fas fa-envelope fa-2x"></i></a>
-            </div>
+            <p>
+                Driven by curiosity and creativity, I design and develop efficient digital solutions 
+                with clean code and analytical thinking to bridge technology and real-world impact.
+            </p>
+
+            <a href="Tanvi_G_Pohankar_Resume.pdf" class="btn" download>
+                Download Resume
+            </a>
         </div>
 
-        <div class="col-md-6 text-center">
-            <img src="images/profile.png" class="img-fluid rounded-circle" width="300">
-        </div>
-
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="container py-5">
-    <h2 class="text-center fw-bold mb-4">About Me</h2>
-    <p class="text-center">
-        I am a Computer Science Engineering student with hands-on experience in 
-        building responsive web applications, Java-based backend systems, 
-        and analytical dashboards. I focus on writing clean, structured, 
-        and scalable code.
-    </p>
-</section>
-
-<!-- EXPERTISE-->
-<section id="expertise" class="container py-5">
-    <h2 class="text-center fw-bold mb-5">Domain Expertise</h2>
-
-    <div class="row">
-
-        <!-- Frontend -->
-        <div class="col-md-4 mb-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h4 class="card-title">Frontend Engineering</h4>
-                    <p class="text-muted">HTML • CSS • JavaScript • React</p>
-                    <ul>
-                        <li>Responsive UI Development</li>
-                        <li>SPA Architecture</li>
-                        <li>Firebase Authentication</li>
-                        <li>Interactive Interfaces</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Backend -->
-        <div class="col-md-4 mb-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h4 class="card-title">Backend & Databases</h4>
-                    <p class="text-muted">Java • MySQL • MS SQL • Firebase</p>
-                    <ul>
-                        <li>JDBC Integration</li>
-                        <li>Schema Design</li>
-                        <li>SQL Optimization</li>
-                        <li>Stored Procedures</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Data -->
-        <div class="col-md-4 mb-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h4 class="card-title">Data Analytics</h4>
-                    <p class="text-muted">Excel • Power BI • Python • SQL</p>
-                    <ul>
-                        <li>Dashboard Creation</li>
-                        <li>KPI Visualization</li>
-                        <li>Data Cleaning</li>
-                        <li>DAX Queries</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="Professional portrait of Tanvi G. Pohankar">
         </div>
 
     </div>
 </section>
 
-<!--PROJECTS-->
-<section id="projects" class="container py-5">
-    <h2 class="text-center fw-bold mb-5">Projects</h2>
+<!-- ================= ABOUT ================= -->
+<section id="about">
+    <div class="container about-flex">
 
-    <div class="row">
-
-        <div class="col-md-4 mb-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h5 class="card-title">Herbipedia</h5>
-                    <p>Firebase authentication-based web platform with AI chatbot integration.</p>
-                </div>
-            </div>
+        <div class="about-image">
+            <img src="images/profile.jpg" alt="Tanvi profile photo">
         </div>
 
-        <div class="col-md-4 mb-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h5 class="card-title">Airline Booking System</h5>
-                    <p>Java + JDBC + SQL backend with structured database design.</p>
-                </div>
-            </div>
+        <div class="about-text">
+            <h2>About</h2>
+
+            <p>
+                I am a final-year Bachelor of Engineering student in Computer Science Engineering 
+                at HVPM’s College of Engineering and Technology.
+            </p>
+
+            <p>
+                Currently undergoing Full Stack Java Development training at Logipool.
+            </p>
+
+            <p>
+                I am actively seeking job and internship opportunities.
+            </p>
         </div>
 
     </div>
 </section>
 
-<!--CONTACT-->
-<section id="contact" class="container py-5 text-center">
-    <h2 class="fw-bold mb-4">Contact Me</h2>
-    <p>Email: er.misstanvig@gmail.com</p>
-    <p>GitHub: https://github.com/tanvipohankar-004</p>
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section-light">
+    <div class="container">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-box">Java</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">HTML5</div>
+            <div class="skill-box">CSS3</div>
+            <div class="skill-box">React.js</div>
+            <div class="skill-box">MySQL</div>
+            <div class="skill-box">MS SQL Server</div>
+            <div class="skill-box">Firebase</div>
+            <div class="skill-box">Git</div>
+            <div class="skill-box">Power BI</div>
+            <div class="skill-box">Microsoft Excel</div>
+        </div>
+    </div>
 </section>
 
-<!--FOOTER-->
-<footer class="bg-dark text-white text-center py-3">
-    © 2026 Tanvi Pohankar | All Rights Reserved
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+                <h3>SQL Injection Attacks & Preventive Measures</h3>
+                <p class="tech-stack">Cybersecurity | Database Security</p>
+                <p>
+                    Conducted an in-depth seminar explaining SQL Injection vulnerabilities including live demonstration 
+                    using authentication bypass payload (' OR 1=1;--).
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Herbipedia – Digital Encyclopedia of Medicinal Herbs</h3>
+                <p class="tech-stack">HTML, CSS, JavaScript, Firebase</p>
+                <p>
+                    Final year team project providing structured information about medicinal herbs aligned with AYUSH principles.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Airline Booking Management System</h3>
+                <p class="tech-stack">Java, JDBC, MySQL</p>
+                <p>
+                    Console-based airline reservation system implementing relational schema design with secure database operations.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section id="leadership" class="section-light">
+    <div class="container leadership-flex">
+
+        <div class="leadership-image">
+            <img src="images/extracurricular.jpg" alt="Leadership and extracurricular activities">
+        </div>
+
+        <div class="leadership-text">
+            <h2>Leadership & Extracurricular Activities</h2>
+            <ul>
+                <li>University Representative (2024–2025)</li>
+                <li>NSS Volunteer (2 Years)</li>
+                <li>Second Prize – Yuva Sanvad India@2047</li>
+                <li>Best Student Award – 3 Consecutive Years</li>
+                <li>SGBAU Youth Festival Participant</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+
+        <div class="contact-icons">
+            <a href="#" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:tanvi.g.pohankar@gmail.com" aria-label="Send Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <div class="contact-form-wrapper">
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <p>© 2026 Tanvi G. Pohankar. All Rights Reserved.</p>
+        <div class="designer-badge">
+            Designed & Developed by Tanvi Pohankar
+        </div>
+    </div>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ================= SCRIPTS ================= -->
+<script>
+    // Typing Effect
+    new Typed("#typing", {
+        strings: [
+            "Software Developer",
+            "Frontend Developer",
+            "Java Developer",
+            "Data Analytics Enthusiast",
+            "SQL & DBMS Practitioner"
+        ],
+        typeSpeed: 70,
+        backSpeed: 50,
+        loop: true
+    });
+
+    // Navbar shadow on scroll
+    window.addEventListener("scroll", function () {
+        document.querySelector(".navbar")
+            .classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Scroll reveal
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+                section.classList.add("visible");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
