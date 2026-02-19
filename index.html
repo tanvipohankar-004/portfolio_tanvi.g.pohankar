@@ -5,126 +5,182 @@
     <title>Tanvi Pohankar | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="font-family: 'Poppins', sans-serif;">
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="logo">Tanvi.dev</div>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+    <a class="navbar-brand fw-bold" href="#">Tanvi.dev</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
 </nav>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hi, I'm <span>Tanvi Pohankar</span></h1>
-        <p>Computer Science Engineer | Frontend • Backend • Data Analytics</p>
-        <a href="#projects" class="btn">Explore My Work</a>
+<section class="container-fluid bg-light py-5">
+    <div class="row align-items-center px-5">
+
+        <div class="col-md-6">
+            <h1 class="fw-bold">Hi, I'm <span class="text-primary">Tanvi Pohankar</span></h1>
+            <h5 class="mt-3">
+                Computer Science Engineer passionate about 
+                Frontend Development, Backend Systems, and Data Analytics.
+            </h5>
+
+            <div class="mt-4">
+                <a href="#" class="me-3 text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="me-3 text-dark"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#" class="text-dark"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <img src="images/profile.png" class="img-fluid rounded-circle" width="300">
+        </div>
+
     </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a Computer Science Engineering student with hands-on experience 
-        in frontend development, backend systems, and data analytics. 
-        I build responsive web applications, database-driven systems, 
-        and insightful dashboards using modern technologies.
+<section id="about" class="container py-5">
+    <h2 class="text-center fw-bold mb-4">About Me</h2>
+    <p class="text-center">
+        I am a Computer Science Engineering student with hands-on experience in 
+        building responsive web applications, Java-based backend systems, 
+        and analytical dashboards. I focus on writing clean, structured, 
+        and scalable code.
     </p>
 </section>
 
-<!-- ================= DOMAIN EXPERTISE ================= -->
-<section id="expertise" class="section">
-    <h2>Domain Expertise</h2>
+<!-- ================= EXPERTISE ================= -->
+<section id="expertise" class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Domain Expertise</h2>
 
-    <div class="expertise-grid">
+    <div class="row">
 
         <!-- Frontend -->
-        <div class="expertise-card">
-            <h3>Frontend Engineering</h3>
-            <p class="tech">HTML • CSS • JavaScript • React</p>
-            <ul>
-                <li>Responsive UI Development</li>
-                <li>Modern SPA Architecture</li>
-                <li>Firebase Authentication</li>
-                <li>Interactive Web Interfaces</li>
-            </ul>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Frontend Engineering</h4>
+                    <p class="text-muted">HTML • CSS • JavaScript • React</p>
+                    <ul>
+                        <li>Responsive UI Development</li>
+                        <li>SPA Architecture</li>
+                        <li>Firebase Authentication</li>
+                        <li>Interactive Interfaces</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Backend -->
-        <div class="expertise-card">
-            <h3>Backend & Databases</h3>
-            <p class="tech">Java • MySQL • MS SQL • Firebase</p>
-            <ul>
-                <li>JDBC Integration</li>
-                <li>SQL Query Optimization</li>
-                <li>Database Schema Design</li>
-                <li>Stored Procedures</li>
-            </ul>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Backend & Databases</h4>
+                    <p class="text-muted">Java • MySQL • MS SQL • Firebase</p>
+                    <ul>
+                        <li>JDBC Integration</li>
+                        <li>Schema Design</li>
+                        <li>SQL Optimization</li>
+                        <li>Stored Procedures</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Data -->
-        <div class="expertise-card">
-            <h3>Data Analytics</h3>
-            <p class="tech">Excel • Power BI • Python</p>
-            <ul>
-                <li>Dashboard Creation</li>
-                <li>KPI & Data Visualization</li>
-                <li>Data Cleaning & Analysis</li>
-                <li>Healthcare Dataset Insights</li>
-            </ul>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Data Analytics</h4>
+                    <p class="text-muted">Excel • Power BI • Python</p>
+                    <ul>
+                        <li>Dashboard Creation</li>
+                        <li>KPI Visualization</li>
+                        <li>Data Cleaning</li>
+                        <li>Healthcare Insights</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </div>
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
+<section id="projects" class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Projects</h2>
 
-    <div class="project-grid">
+    <div class="row">
 
-        <div class="project-card">
-            <h3>Herbipedia</h3>
-            <p>Web platform with Firebase authentication and AI chatbot integration.</p>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Herbipedia</h5>
+                    <p>Firebase authentication-based web platform with AI chatbot integration.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="project-card">
-            <h3>Airline Booking System</h3>
-            <p>Java + JDBC + SQL based backend system with structured database design.</p>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Airline Booking System</h5>
+                    <p>Java + JDBC + SQL backend with structured database design.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="project-card">
-            <h3>Healthcare Dashboard</h3>
-            <p>Power BI dashboard analyzing healthcare datasets with KPIs & insights.</p>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Healthcare Dashboard</h5>
+                    <p>Power BI dashboard analyzing healthcare datasets with KPIs.</p>
+                </div>
+            </div>
         </div>
 
     </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
+<section id="contact" class="container py-5 text-center">
+    <h2 class="fw-bold mb-4">Contact Me</h2>
     <p>Email: yourmail@gmail.com</p>
     <p>GitHub: github.com/yourprofile</p>
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer>
+<footer class="bg-dark text-white text-center py-3">
     © 2026 Tanvi Pohankar | All Rights Reserved
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
