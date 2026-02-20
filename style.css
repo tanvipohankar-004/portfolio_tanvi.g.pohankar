@@ -189,12 +189,22 @@ h2::after {
 .about-image img {
     width: 250px;
     border-radius: 12px;
-    box-shadow: 0 0 35px rgba(16,185,129,0.25);
-    transition: 0.4s ease;
+
+    /* White glow */
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.3);
+
+    transition: all 0.4s ease;
 }
 
 .about-image img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+
+    /* Stronger glow on hover */
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 60px rgba(255, 255, 255, 0.4);
 }
 
 /* ================= SKILLS ================= */
