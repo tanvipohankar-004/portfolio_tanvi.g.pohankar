@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* --------------------------------------
        7.Email Working
-    -------------------------------------- */
+       --------------------------------------*/
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function (e) {
@@ -142,12 +142,9 @@ form.addEventListener("submit", function (e) {
   emailjs.sendForm(
     "service_qbjh1l9",
     "template_l3h3818",
-     {
-    name: form.name.value,
-    email: form.email.value
-  }
     this
-  ).then(() => {
+  )
+  .then(() => {
 
     button.innerText = "Message Sent ✓";
     button.style.background = "#10b981";
@@ -160,7 +157,8 @@ form.addEventListener("submit", function (e) {
       button.style.background = "";
     }, 3000);
 
-  }).catch((error) => {
+  })
+  .catch((error) => {
     button.innerText = "Failed ❌";
     button.disabled = false;
     console.error(error);
