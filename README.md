@@ -3,7 +3,7 @@
 ![Portfolio Live](https://img.shields.io/badge/Live-Portfolio-green?style=for-the-badge)
 
 ## Live Demo
-Check out my portfolio here: [Click Here](https://tanvipohankar-004.github.io/portfolio_tanvi.g.pohankar/)
+Check out my portfolio here: [Click Here](https://tanvipohankar-004.github.io/portfolio_tanvi.g.pohankar/) (NOT PUBLISHED YET..!)
 
 ---
 
