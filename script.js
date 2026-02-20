@@ -130,6 +130,11 @@ document.addEventListener("DOMContentLoaded", function () {
     /* --------------------------------------
        7.Email Working
        --------------------------------------*/
+// Initialize EmailJS 
+(function () {
+  emailjs.init("6BmKOxDIDo7-x695q");
+})();
+
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function (e) {
@@ -139,13 +144,25 @@ form.addEventListener("submit", function (e) {
   button.innerText = "Sending...";
   button.disabled = true;
 
+ // (Admin Notification)
   emailjs.sendForm(
-    "service_qbjh1l9",
-    "template_l3h3818",
+    "YOUR_SERVICE_ID",
+    "YOUR_ADMIN_TEMPLATE_ID",
     this
   )
   .then(() => {
 
+    // 2️⃣ Send Auto Reply to Visitor
+    emailjs.send(
+      "service_qbjh1l9",
+    "template_l3h3818",
+      {
+        name: form.name.value,
+        email: form.email.value
+      }
+    );
+
+    // Success UI
     button.innerText = "Message Sent ✓";
     button.style.background = "#10b981";
 
@@ -159,8 +176,8 @@ form.addEventListener("submit", function (e) {
 
   })
   .catch((error) => {
+    console.error("EmailJS Error:", error);
     button.innerText = "Failed ❌";
     button.disabled = false;
-    console.error(error);
   });
 });
