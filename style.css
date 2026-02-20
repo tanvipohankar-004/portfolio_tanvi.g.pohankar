@@ -122,13 +122,25 @@ body {
 
 .hero-image img {
     width: 300px;
-    border-radius: 16px;
-    box-shadow: 0 0 40px rgba(16,185,129,0.25);
-    transition: 0.4s ease;
+    height: 300px;             
+    border-radius: 50%;         
+    object-fit: cover;         
+
+    border: 6px solid #ffffff;  
+
+    /* Soft white glow */
+    box-shadow: 
+        0 0 25px rgba(255, 255, 255, 0.6),
+        0 0 50px rgba(255, 255, 255, 0.3);
+
+    transition: all 0.4s ease;
 }
 
 .hero-image img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 35px rgba(255, 255, 255, 0.8),
+        0 0 70px rgba(255, 255, 255, 0.4);
 }
 
 /* ================= SECTIONS ================= */
