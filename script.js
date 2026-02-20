@@ -1,50 +1,129 @@
-// Modal
-function openModal() {
-    document.getElementById("modal").style.display = "block";
-}
+/* ==========================================
+   Portfolio Script
+   Modern + Corporate + Emerald Theme
+   Author: Tanvi Pohankar
+========================================== */
 
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-// Scroll Animation
-const sections = document.querySelectorAll(".section");
+    /* --------------------------------------
+       1. Smooth Scroll Navigation
+    -------------------------------------- */
 
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        const position = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
 
-        if (position < screenPosition) {
-            section.style.opacity = 1;
-            section.style.transform = "translateY(0)";
-        }
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
     });
-});
 
-// Contact Form Validation
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
-    let formMessage = document.getElementById("formMessage");
+    /* --------------------------------------
+       2. Scroll Reveal Animation
+    -------------------------------------- */
 
-    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    const revealElements = document.querySelectorAll(".reveal");
 
-    if (name === "" || email === "" || message === "") {
-        formMessage.innerText = "All fields are required.";
-        formMessage.style.color = "red";
-        return;
-    }
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
 
-    if (!email.match(emailPattern)) {
-        formMessage.innerText = "Please enter a valid email address.";
-        formMessage.style.color = "red";
-        return;
-    }
+        revealElements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const revealPoint = 120;
 
-    formMessage.innerText = "Message sent successfully!";
-    formMessage.style.color = "green";
+            if (elementTop < windowHeight - revealPoint) {
+                el.classList.add("active");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+
+    /* --------------------------------------
+       3. Active Navbar Highlight
+    -------------------------------------- */
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active-nav");
+            if (link.getAttribute("href") === `#${currentSection}`) {
+                link.classList.add("active-nav");
+            }
+        });
+    });
+
+
+    /* --------------------------------------
+       4. Animated Skill Bars
+    -------------------------------------- */
+
+    const skillSection = document.querySelector(".skills");
+    const skillBars = document.querySelectorAll(".skill-progress");
+    let skillsAnimated = false;
+
+    const animateSkills = () => {
+        if (!skillSection) return;
+
+        const sectionTop = skillSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 100 && !skillsAnimated) {
+            skillBars.forEach(bar => {
+                const widthValue = bar.getAttribute("data-width");
+                bar.style.width = widthValue;
+            });
+            skillsAnimated = true;
+        }
+    };
+
+    window.addEventListener("scroll", animateSkills);
+
+
+    /* --------------------------------------
+       5. Subtle Card Hover Lift Effect
+    -------------------------------------- */
+
+    const cards = document.querySelectorAll(".project-card, .extra-card");
+
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "translateY(-8px)";
+            card.style.transition = "all 0.3s ease";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "translateY(0)";
+        });
+    });
+
+
+    /* --------------------------------------
+       6. Page Fade-in on Load
+    -------------------------------------- */
+
+    document.body.classList.add("loaded");
+
 });
