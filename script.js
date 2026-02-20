@@ -99,40 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    window.addEventListener("scroll", animateSkills);
-
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const button = form.querySelector("button");
-  button.innerText = "Sending...";
-  button.disabled = true;
-
-  emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
-    this
-  ).then(() => {
-
-    button.innerText = "Message Sent ✓";
-    button.style.background = "#10b981";
-
-    form.reset();
-
-    setTimeout(() => {
-      button.innerText = "Send Message";
-      button.disabled = false;
-      button.style.background = "";
-    }, 3000);
-
-  }).catch((error) => {
-    button.innerText = "Failed ❌";
-    button.disabled = false;
-    console.error(error);
-  });
-});
+  
     /* --------------------------------------
        5. Subtle Card Hover Lift Effect
     -------------------------------------- */
@@ -173,8 +140,12 @@ form.addEventListener("submit", function (e) {
   button.disabled = true;
 
   emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "service_qbjh1l9",
+    "template_l3h3818",
+     {
+    name: form.name.value,
+    email: form.email.value
+  }
     this
   ).then(() => {
 
