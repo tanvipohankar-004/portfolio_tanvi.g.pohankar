@@ -32,12 +32,7 @@
         </ul>
     </div>
 </nav>
-<!-- ================= Revealing pages =================   -->
-    <section id="about" class="reveal">
-    <section id="projects" class="reveal">
-    <section id="skills" class="reveal skills">
-    <section id="contact" class="reveal">
-    
+
 <!-- ================= HERO ================= -->
 <section id="home" class="hero">
     <div class="container hero-flex">
@@ -51,13 +46,13 @@
                 with clean code and analytical thinking to bridge technology and real-world impact.
             </p>
 
-            <a href="Tanvi_G_Pohankar_Resume.pdf" class="btn" download>
+            <a href="Images/tanvi.g.pohankar_fresher_be.pdf" class="btn" download>
                 Download Resume
             </a>
         </div>
 
         <div class="hero-image">
-            <img src="images/profile.jpg" alt="Professional portrait of Tanvi G. Pohankar">
+            <img src="Images/prof_tanvi.jpg" alt="Professional portrait of Tanvi G. Pohankar">
         </div>
 
     </div>
@@ -68,7 +63,7 @@
     <div class="container about-flex">
 
         <div class="about-image">
-            <img src="images/profile.jpg" alt="Tanvi profile photo">
+            <img src="Images/tanvi_anchor.png" alt="Tanvi profile photo">
         </div>
 
         <div class="about-text">
@@ -89,48 +84,6 @@
         </div>
 
     </div>
-</section>
-<!-- ===== PROFILE SECTION ===== -->
-<section id="profile" class="profile-section">
-    <h2 class="section-title">My Profile</h2>
-
-    <div class="profile-container">
-
-        <!-- Main Professional Image -->
-        <div class="profile-card main-profile">
-            <img src="Images/prof_tanvi.jpg" alt="Tanvi Professional Photo">
-        </div>
-
-        <!-- Anchor / Secondary Professional Image -->
-        <div class="profile-card secondary-profile">
-            <img src="Images/tanvi_anchor.png" alt="Tanvi Anchor Photo">
-        </div>
-
-    </div>
-</section>
-
-
-<!-- ===== EXTRA CURRICULAR SECTION ===== -->
-<section id="extra" class="extra-section">
-    <h2 class="section-title">Extra Curricular Activities</h2>
-
-    <div class="extra-container">
-        <div class="extra-card">
-            <img src="Images/WhatsApp Image 2026-02-20 at 18.58.31.jpeg" alt="Extra Activity">
-        </div>
-    </div>
-</section>
-
-
-<!-- ===== RESUME SECTION ===== -->
-<section id="resume" class="resume-section">
-    <h2 class="section-title">Resume</h2>
-
-    <a href="Images/tanvi.g.pohankar_fresher_be.pdf" 
-       download 
-       class="resume-btn">
-       Download Resume
-    </a>
 </section>
 
 <!-- ================= SKILLS ================= -->
@@ -196,7 +149,7 @@
     <div class="container leadership-flex">
 
         <div class="leadership-image">
-            <img src="images/extracurricular.jpg" alt="Leadership and extracurricular activities">
+            <img src="Images/whatsapp.jpg" alt="Leadership and extracurricular activities">
         </div>
 
         <div class="leadership-text">
@@ -260,7 +213,6 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
-    // Typing Effect
     new Typed("#typing", {
         strings: [
             "Software Developer",
@@ -274,13 +226,11 @@
         loop: true
     });
 
-    // Navbar shadow on scroll
     window.addEventListener("scroll", function () {
         document.querySelector(".navbar")
             .classList.toggle("scrolled", window.scrollY > 50);
     });
 
-    // Scroll reveal
     const sections = document.querySelectorAll("section");
 
     window.addEventListener("scroll", () => {
@@ -292,7 +242,8 @@
         });
     });
 </script>
-        <script src="script.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
