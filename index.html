@@ -181,25 +181,23 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-
-        <div class="contact-form-wrapper">
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Full Name" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-
-                <div class="form-group">
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+<div class="contact-form-wrapper">
+    <form id="contact-form">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Full Name" required>
         </div>
 
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-group">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</div>
     </div>
 </section>
 
