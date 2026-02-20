@@ -158,3 +158,40 @@ form.addEventListener("submit", function (e) {
     document.body.classList.add("loaded");
 
 });
+
+
+    /* --------------------------------------
+       7.Email Working
+    -------------------------------------- */
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const button = form.querySelector("button");
+  button.innerText = "Sending...";
+  button.disabled = true;
+
+  emailjs.sendForm(
+    "YOUR_SERVICE_ID",
+    "YOUR_TEMPLATE_ID",
+    this
+  ).then(() => {
+
+    button.innerText = "Message Sent ✓";
+    button.style.background = "#10b981";
+
+    form.reset();
+
+    setTimeout(() => {
+      button.innerText = "Send Message";
+      button.disabled = false;
+      button.style.background = "";
+    }, 3000);
+
+  }).catch((error) => {
+    button.innerText = "Failed ❌";
+    button.disabled = false;
+    console.error(error);
+  });
+});
