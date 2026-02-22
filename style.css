@@ -386,9 +386,10 @@ footer {
 
 /* Smaller logo */
 .footer-logo {
-    width: 28px;              /* properly reduced size */
+    width: 180px;              /* properly reduced size */
     height: auto;
     display: block;
+    max-width: 100%;
     margin: 0 auto 10px auto;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
