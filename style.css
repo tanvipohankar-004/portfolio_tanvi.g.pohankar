@@ -282,34 +282,20 @@ h2::after {
 
 /* ================= LEADERSHIP ================= */
 
-.leadership-flex {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+.leadership-flex ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    width: 100%;
 }
 
-/* ===== Leadership Image ===== */
-.leadership-img {
-    width: 320px;
-    height: 400px;
-    object-fit: cover;
-
-    border-radius: 18px;   /* Rectangle */
-    border: 5px solid #ffffff;
-
-    box-shadow: 
-        0 0 25px rgba(255,255,255,0.4),
-        0 15px 40px rgba(0,0,0,0.25);
-
-    transition: all 0.4s ease;
+.leadership-flex ul li {
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-left: 4px solid var(--accent);
 }
 
-.leadership-img:hover {
-    transform: scale(1.05);
-    box-shadow: 
-        0 0 35px rgba(255,255,255,0.6),
-        0 20px 50px rgba(0,0,0,0.35);
-}
 /* ================= CONTACT ================= */
 
 .contact-icons {
