@@ -130,3 +130,39 @@ document.addEventListener("DOMContentLoaded", function () {
     /* --------------------------------------
        7.Email Working
        --------------------------------------*/
+const form = document.getElementById("contact-form");
+const button = document.getElementById("submit-btn");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    button.classList.add("loading");
+    button.innerText = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            status.innerText = "Message sent successfully ✓";
+            status.style.display = "block";
+            form.reset();
+            button.innerText = "Send Message";
+            button.classList.remove("loading");
+        } else {
+            throw new Error("Failed");
+        }
+    } catch (error) {
+        status.innerText = "Something went wrong. Please try again.";
+        status.style.color = "red";
+        status.style.display = "block";
+        button.innerText = "Send Message";
+        button.classList.remove("loading");
+    }
+});
