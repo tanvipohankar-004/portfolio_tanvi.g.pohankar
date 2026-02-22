@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
        7.Email Working
        --------------------------------------*/
 // Initialize EmailJS 
+
 (function () {
   emailjs.init("6BmKOxDIDo7-x695q");
 })();
@@ -144,28 +145,29 @@ form.addEventListener("submit", function (e) {
   button.innerText = "Sending...";
   button.disabled = true;
 
- // (Admin Notification)
+
   emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_ADMIN_TEMPLATE_ID",
+    "service_qbjh1l9",       
+   "template_l3h3818",   
     this
   )
   .then(() => {
 
-    // 2️⃣ Send Auto Reply to Visitor
-    emailjs.send(
+    // Sending Auto Reply to sender
+    return emailjs.send(
       "service_qbjh1l9",
-    "template_l3h3818",
+      "template_l3h3818",
       {
         name: form.name.value,
         email: form.email.value
       }
     );
 
-    // Success UI
+  })
+  .then(() => {
+
     button.innerText = "Message Sent ✓";
     button.style.background = "#10b981";
-
     form.reset();
 
     setTimeout(() => {
@@ -177,7 +179,7 @@ form.addEventListener("submit", function (e) {
   })
   .catch((error) => {
     console.error("EmailJS Error:", error);
-    button.innerText = "Failed ❌";
+    button.innerText = "Email Not Sent";
     button.disabled = false;
   });
 });
