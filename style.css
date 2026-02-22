@@ -376,37 +376,40 @@ footer {
     background: linear-gradient(90deg, var(--dark), var(--primary));
     color: #d1fae5;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
+/* Logo wrapper spacing */
 .footer-content {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
-
+/* Smaller logo */
 .footer-logo {
-    width: 60px;
+    width: 28px;              /* properly reduced size */
     height: auto;
     display: block;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 10px auto;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Subtle hover effect */
 .footer-logo:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 8px var(--accent));
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 6px var(--accent));
 }
 
 footer p {
-    font-size: 14px;
-    margin: 8px 0;
+    font-size: 13px;
+    margin: 6px 0;
     opacity: 0.9;
 }
 
+/* Designer badge */
 .designer-badge {
-    margin-top: 14px;
+    margin-top: 10px;
     display: inline-block;
-    padding: 6px 18px;
+    padding: 6px 16px;
     border: 1px solid var(--accent);
     border-radius: 20px;
     font-size: 12px;
@@ -414,6 +417,7 @@ footer p {
     transition: all 0.3s ease;
 }
 
+/* Badge hover */
 .designer-badge:hover {
     background-color: var(--accent);
     color: var(--dark);
