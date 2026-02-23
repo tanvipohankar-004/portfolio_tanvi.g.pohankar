@@ -280,6 +280,69 @@ h2::after {
     margin-bottom: 10px;
 }
 
+
+/* ================================Education Section====================== */
+#education {
+    padding: 80px 0;
+}
+
+.education-card {
+    background: #111827;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.education-college {
+    font-weight: 500;
+    color: #d1fae5;
+    margin-bottom: 10px;
+}
+
+.education-description {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* Small Education Entries (HSC & SSC) */
+.education-sub {
+    background: #0f172a;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.education-sub:hover {
+    background: #1e293b;
+    transform: translateX(4px);
+}
+
+.education-sub h4 {
+    color: var(--accent);
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.education-sub p {
+    font-size: 14px;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
 /* ================= LEADERSHIP ================= */
 
 .leadership-flex ul {
